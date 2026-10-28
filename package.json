@@ -1,0 +1,6 @@
+{
+	"scripts": {
+		"dev:front": "npm --prefix ./frontend run dev",
+		"dev:back": "npm --prefix ./frontend run dev"
+	}
+}
