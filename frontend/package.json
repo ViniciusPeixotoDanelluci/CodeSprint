@@ -37,6 +37,12 @@
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
+		"@fsegurai/codemirror-theme-github-dark": "^6.2.7",
+		"@lucide/svelte": "^1.63.0",
+		"@replit/codemirror-lang-csharp": "^6.2.0",
+		"papaparse": "^5.7.0",
+		"socket.io-client": "^4.8.4",
+		"svelte-codemirror-editor": "^2.1.0",
 		"svelte-splitpanes": "^8.0.12"
 	}
 }

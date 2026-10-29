@@ -1,12 +1,11 @@
 <script lang="ts">
     import { Pane, Splitpanes } from 'svelte-splitpanes';
+	import CodeEditor from './CodeEditor.svelte';
 </script>
 
-<div>Editor</div>
-
-<div>
-    <Splitpanes pushOtherPanes={false} style="min-width: 1000px;">
-        <Pane minSize={10} maxSize={80} snapSize={12.555}>
+<div class="editor-container w-full-vw">
+    <Splitpanes pushOtherPanes={false} style={"border-radius: 0.25rem; overflow: hidden;"}>
+        <Pane minSize={20} maxSize={80} snapSize={3.555}>
             <div class="panel">
                 Questão
             </div>
@@ -14,13 +13,13 @@
         <Pane>
             <div class="panel">
                 <Splitpanes horizontal={true} pushOtherPanes={false}>
-                    <Pane minSize={10} maxSize={80} snapSize={12.555}>
-                        <div class="panel">
-                            Código
+                    <Pane minSize={20} maxSize={80} snapSize={3.555}>
+                        <div>
+                            <CodeEditor />
                         </div>
                     </Pane>
-                    <Pane minSize={10} maxSize={80} snapSize={12.555}>
-                        <div class="panel">
+                    <Pane minSize={20} maxSize={80} snapSize={3.555}>
+                        <div >
                             Terminal
                         </div>
                     </Pane>
@@ -29,10 +28,13 @@
         </Pane>
     </Splitpanes>
 </div>
+
 <style>
+    .editor-container {
+        padding: 0.55rem;
+    }
     .panel {
-        min-width: 300px;
-        min-height: 300px;
-        height: 600px;
+        height: 100%;
+        border-radius: 5.35rem;
     }
 </style>
