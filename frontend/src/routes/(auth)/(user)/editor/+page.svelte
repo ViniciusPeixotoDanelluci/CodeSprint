@@ -4,7 +4,7 @@
 </script>
 
 <div class="editor-container w-full-vw">
-    <Splitpanes pushOtherPanes={false} style={"border-radius: 0.25rem; overflow: hidden;"}>
+    <Splitpanes  pushOtherPanes={false} style={"border-radius: 0.25rem; overflow: hidden;"}>
         <Pane minSize={20} maxSize={80} snapSize={3.555}>
             <div class="panel">
                 Questão
@@ -31,10 +31,13 @@
 
 <style>
     .editor-container {
+        width: 90vw;
+        height: 90vh;
         padding: 0.55rem;
     }
     .panel {
         height: 100%;
-        border-radius: 5.35rem;
+        background-color: aquamarine;
+        border-radius: 0.35rem;
     }
 </style>

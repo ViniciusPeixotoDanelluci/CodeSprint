@@ -1,28 +1,13 @@
 <script lang="ts">
-	import type { LayoutProps } from './$types';
 	import Header from './Header.svelte';
+	import type { LayoutProps } from './$types';
+
 	import '../common.css';
 
 	let { children }: LayoutProps = $props();
 </script>
 
-<div class="user-layout">
+<div class="h-full-vh flex-col">
 	<Header />
-
-	<main>
-		{@render children()}
-	</main>
+	{@render children()}
 </div>
-
-<style>
-	.user-layout {
-		height: 100dvh;
-		display: flex;
-		flex-direction: column;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-	}
-</style>

@@ -37,10 +37,12 @@
 	--fs-500: 1.25rem;
 	--fs-400: 1.00rem; /* Base size */ 
 	--fs-300: 0.80rem;
-	--fs-200: 0.75rem;
-	--fs-sm: 1vw;
+	--fs-200: 0.70rem;
+	--fs-150: 0.65rem;
+	--fs-sm: 0.5vw;
 
-	--color-bg-1: hsl(209, 36%, 86%);
+	--color-bg-1: #f4f3ed; /*rgb(206, 220, 232);*/
+	--clr-bg-task-card: #f8f8f8;
 	--color-theme-1: rgb(255, 62, 0);
 	--color-text: rgba(0, 0, 0, 0.7);
 
@@ -182,6 +184,10 @@ textarea:not([rows]) {
 }
 
 .flex-inline { display: inline-flex; } 
+
+/* Positioning */
+.pos-rel { position: relative; }
+.pos-abs { position: absolute; }
 
 /* Overflows */
 .overflow-h { overflow: hidden; }
