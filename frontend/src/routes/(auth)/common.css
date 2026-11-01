@@ -32,12 +32,12 @@
 	--font-body: 'Geist Sans', Arial, 'IBM Plex Mono', Georgia, 'Space Grotesk';
 
 	--fs-xl: 10vw;
-	--fs-700: 2.00rem;
+	--fs-700: 2rem;
 	--fs-600: 1.75rem;
 	--fs-500: 1.25rem;
-	--fs-400: 1.00rem; /* Base size */ 
-	--fs-300: 0.80rem;
-	--fs-200: 0.70rem;
+	--fs-400: 1rem; /* Base size */
+	--fs-300: 0.8rem;
+	--fs-200: 0.7rem;
 	--fs-150: 0.65rem;
 	--fs-sm: 0.5vw;
 
@@ -183,26 +183,56 @@ textarea:not([rows]) {
 	flex-direction: column;
 }
 
-.flex-inline { display: inline-flex; } 
+.flex-inline {
+	display: inline-flex;
+}
 
 /* Positioning */
-.pos-rel { position: relative; }
-.pos-abs { position: absolute; }
+.pos-rel {
+	position: relative;
+}
+.pos-abs {
+	position: absolute;
+}
 
 /* Overflows */
-.overflow-h { overflow: hidden; }
-.overflow-s { overflow: scroll; }
+.overflow-h {
+	overflow: hidden;
+}
+.overflow-s {
+	overflow: scroll;
+}
 
 /* Container Sizing */
-.w-full { width: 100%; }
-.w-full-vw { width: 100vw; }
-.h-full { height: 100%; }
-.h-full-vh { height: 100vh; }
+.w-full {
+	width: 100%;
+}
+.w-full-vw {
+	width: 100vw;
+}
+.h-full {
+	height: 100%;
+}
+.h-full-vh {
+	height: 100vh;
+}
 
 /* Alignment */
-.justify-center { justify-content: center; }
-.justify-start { justify-content: flex-start; }
-.justify-between { justify-content: space-between; }
-.justify-evenly { justify-content: space-evenly; }
-.align-center { align-items: center; }
-.align-end { align-items: end; }
+.justify-center {
+	justify-content: center;
+}
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.justify-evenly {
+	justify-content: space-evenly;
+}
+.align-center {
+	align-items: center;
+}
+.align-end {
+	align-items: end;
+}

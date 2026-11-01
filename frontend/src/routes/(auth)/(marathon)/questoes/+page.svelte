@@ -1,19 +1,20 @@
 <script lang="ts">
-	import { MoreHorizontalIcon } from '@lucide/svelte';
-    import { Semester } from './semester-type';
-    import Task from './Task.svelte';
+	import { MoreHorizontalIcon } from '@lucide/svelte'
+	import { Semester } from './semester-type'
+	import Task from './Task.svelte'
+	import Toast from './Toast.svelte'
 
-    interface Student {
-        name: string, 
-        semester: Semester,   
-    }
+	interface Student {
+		name: string
+		semester: Semester
+	}
 
-    // let students: Student[] = $props()
-    let students: Student[] = [
-        { name: "Lucas", semester: Semester.FIRST },
-        { name: "Jones", semester: Semester.FIRST },
-        { name: "Luna", semester: Semester.FIRST },
-    ]
+	// let students: Student[] = $props()
+	let students: Student[] = [
+		{ name: 'Lucas Alvaro Pinheiro', semester: Semester.FIRST },
+		{ name: 'Jones', semester: Semester.SECOND },
+		{ name: 'Ariel Carvalho', semester: Semester.FIFTH }
+	]
 </script>
 
 <div class="dashboard">
@@ -30,7 +31,7 @@
 		<section class="event-info-container pos-rel overflow-h" aria-labelledby="event-title">
 			<div class="flex-row align-center justify-between">
 				<!-- <span class="event-status"><span class="status-dot"></span> Sprint ao vivo</span> -->
-			    <h2 id="event-title">Maratona 2027</h2>
+				<h2 id="event-title">Maratona 2027</h2>
 				<div class="event-mark" aria-hidden="true">
 					<i></i><i></i><i></i><i></i><i></i><i></i>
 				</div>
@@ -39,11 +40,10 @@
 			<div class="flex-col">
 				<span class="timer__label">Tempo restante</span>
 				<span class="timer__text" aria-label="22 horas, 47 minutos e 16 segundos">
-                    <!--Colocar horário de verdade aqui-->
-                    1<span>:</span>47<span>:</span>16
+					<!--Colocar horário de verdade aqui -->
+					1<span>:</span>47<span>:</span>16
 				</span>
 			</div>
-
 			<div
 				class="timer__bar"
 				role="progressbar"
@@ -56,11 +56,10 @@
 			</div>
 			<div class="event-progress flex-row align-center justify-between">
 				<span class="solved-tasks">0 / 6 resolvidos</span>
-				<span class="ranking low">22° lugar</span> 
-                <!--Esse low é pra indicar o quão alto vc esta, talvez, fica pra implementar alguma hora :P-->
+				<span class="ranking low">22° lugar</span>
+				<!--Esse low é pra indicar o quão alto vc esta, talvez, fica pra implementar alguma hora :P -->
 			</div>
 		</section>
-
 		<section class="team-container flex-col overflow-h">
 			<div class="team-info" aria-labelledby="team-info">
 				<div class="team-heading flex-row align-center justify-between">
@@ -68,17 +67,18 @@
 				</div>
 				<h3 id="team-title">Time 6</h3>
 			</div>
-
 			<div class="team">
-                <!-- {#each students as s, index}
-                    <div class="student">
-                        <span class="student__avatar" aria-hidden="true">L</span>
-                        <span class="student__details flex-col">
-                            <span class="student__name">{s.name}</span>
-                            <span class="student__semester">{s.semester}</span>
-                        </span>
-                    </div>
-                {/each} -->
+				<!--
+                    {#each students as s, index}
+                        <div class="student">
+                            <span class="student__avatar" aria-hidden="true">L</span>
+                            <span class="student__details flex-col">
+                                <span class="student__name">{s.name}</span>
+                                <span class="student__semester">{s.semester}</span>
+                            </span>
+                        </div>
+                    {/each}
+                -->
 				<div class="student">
 					<span class="student__avatar" aria-hidden="true">L</span>
 					<span class="student__details flex-col">
@@ -102,6 +102,9 @@
 				</div>
 			</div>
 		</section>
+		<section>
+			<Toast />
+		</section>
 	</aside>
 </div>
 
@@ -124,7 +127,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		grid-template-rows: repeat(3, 1fr);
-		padding: 1rem 0;
+		/* padding: 1rem 0; */
 		gap: 0.75rem;
 	}
 
@@ -170,7 +173,7 @@
 	.timer__label {
 		color: #9aa8c3;
 		font-family: 'IBM Plex Mono';
-        font-size: var(--fs-150);
+		font-size: var(--fs-150);
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 	}
